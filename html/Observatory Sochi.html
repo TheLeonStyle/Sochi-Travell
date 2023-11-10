@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<script src="../js/swiper-bundle.min.js" defer></script>
+	<script src="../js/script.js" defer></script>
+	<script src="../js/script-slider.js" defer></script>
+	<title>Экскурсии в Сочи</title>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container">
+			<div class="header__wrapper">
+
+				<nav class="header__nav">
+					<button class="header__button header__button-gallery hover__border-bottom">Туры</button>
+					<button class="header__button header__button-advantages hover__border-bottom">Преимущества</button>
+					<button class="header__button header__button-reviews hover__border-bottom">Отзывы</button>
+					<button class="header__button header__button-contacts hover__border-bottom">Контакты</button>
+				</nav>
+
+				<a href="../index.html" class="header__logo">
+					<div class="logo__wrapper">
+						<div class="logo__top">
+							<img src="../img/logo.png" alt="Логотип">
+							<div class="logo__text">
+								<p class="logo__title">Sochi Travell</p>
+								<p class="logo__subtitle">путешествуй с пользой</p>
+							</div>
+						</div>
+					</div>
+				</a>
+
+
+				<div class="header__right">
+
+					<a href="tel:+79516285001" class="header__phone hover__border-bottom">+79516285001</a>
+
+					<div class="header__socials">
+						<a href="https://t.me/Nikolay_Gennadyevich" target="_blank">
+							<svg class="header__icon" viewBox="0 0 100 100">
+								<path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#ffffff"></path>
+							</svg>
+						</a>
+						<a href="https://wa.me/89516285001" target="_blank">
+							<svg class="header__icon" viewBox="0 0 100 100">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M50.168 10C60.8239 10.004 70.8257 14.1522 78.346 21.6819C85.8676 29.2114 90.0066 39.2185 90 49.8636C89.9906 71.8252 72.1203 89.6956 50.1668 89.6956H50.1508C43.4852 89.6929 36.9338 88.0208 31.1162 84.8468L10 90.3853L15.6516 69.7437C12.1665 63.7042 10.3323 56.851 10.3349 49.8304C10.343 27.8676 28.2134 10 50.168 10V10ZM61.5376 54.7631C62.4507 55.0954 67.3433 57.5023 68.3389 58.0009C68.5313 58.0971 68.7113 58.1842 68.8784 58.265C69.5753 58.602 70.0458 58.8296 70.2462 59.1651C70.4947 59.5799 70.4947 61.5736 69.6654 63.8982C68.8359 66.2229 64.8605 68.3442 62.9478 68.63C61.2319 68.8865 59.0627 68.9928 56.6782 68.2353C55.2322 67.7767 53.3794 67.1653 51.0041 66.1392C41.6698 62.1082 35.3628 53.06 34.1747 51.3556C34.0919 51.2368 34.0341 51.1538 34.0017 51.1106L33.9981 51.1056C33.486 50.4243 29.9372 45.7022 29.9372 40.8149C29.9372 36.2325 32.1873 33.8303 33.2244 32.7232C33.2961 32.6467 33.3619 32.5763 33.4208 32.5118C34.3341 31.5149 35.412 31.2664 36.0751 31.2664C36.7385 31.2664 37.4029 31.2717 37.9826 31.301C38.0541 31.3046 38.1286 31.304 38.2056 31.3037C38.786 31.3001 39.5087 31.2957 40.2221 33.0089C40.4976 33.6707 40.9012 34.653 41.3265 35.6882C42.1818 37.7702 43.1251 40.066 43.2912 40.399C43.5397 40.8974 43.7058 41.4782 43.3736 42.1427C43.323 42.2436 43.2763 42.3387 43.2318 42.4295C42.9831 42.9364 42.7995 43.3104 42.378 43.8029C42.2125 43.9963 42.0413 44.2045 41.8703 44.4131C41.5273 44.8309 41.1842 45.2488 40.8853 45.5467C40.387 46.0425 39.8686 46.5808 40.4493 47.5777C41.0303 48.5731 43.028 51.8323 45.9867 54.472C49.1661 57.3091 51.93 58.5078 53.3318 59.1157C53.6058 59.2346 53.8279 59.3308 53.9907 59.4124C54.9849 59.9109 55.5658 59.8284 56.1465 59.1637C56.7274 58.4993 58.6347 56.2583 59.298 55.2615C59.9612 54.2646 60.6259 54.4307 61.5376 54.7631V54.7631Z" fill="#ffffff"></path>
+							</svg>
+						</a>
+					</div>
+
+					<a href="#no-scroll" class="header__link reserve-active">Забронировать</a>
+
+				</div>
+
+				<button class="header__burger"><span></span></button>
+
+
+			</div>
+		</div>
+
+		<div class="popup">
+			<div class="popup__container">
+				<div class="popup__wrapper">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="reserve">
+
+			<div class="reserve__close">
+				<svg viewBox="0 0 24 24">
+					<path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F" />
+				</svg>
+			</div>
+
+			<div class="reserve__popup">
+
+				<form action="#" class="reserve__form reserve__form-1">
+
+					<div class="reserve__wrapper reserve__wrapper-1">
+
+						<div class="reserve__text">Здесь Вы можете забронировать понравившееся направление</div>
+						<div class="reserve__title">Где сейчас находитесь?</div>
+						<div class="reserve__subtitle">Выберите один вариант ответа</div>
+
+						<div class="reserve__screen">
+							<div class="reserve__item">
+								<input id="center" type="radio" value="В Центральном Сочи" name="location" class="reserve__radio-custom">
+								<label for="center" class="reserve__label"><span>В Центральном Сочи</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="adler" type="radio" value="В Адлере" name="location" class="reserve__radio-custom">
+								<label for="adler" class="reserve__label"><span>В Адлере</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="other" type="radio" value="Другое" name="location" class="reserve__radio-custom">
+								<label for="other" class="reserve__label"><span>Другое</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="home" type="radio" checked value="Планирую поездку из дома" name="location" class="reserve__radio-custom">
+								<label for="home" class="reserve__label"><span>Планирую поездку из дома</span></label>
+							</div>
+						</div>
+
+						<div class="reserve__bottom">
+							<div class="reserve__pagination">1/4</div>
+							<button class="reserve__button reserve__button-next">Вперед →</button>
+						</div>
+
+					</div>
+
+					<div class="reserve__wrapper reserve__wrapper-2">
+
+						<div class="reserve__text">Здесь Вы можете забронировать понравившееся направление</div>
+						<div class="reserve__title">Какое направление выбрали?</div>
+						<div class="reserve__subtitle">Выберите один или несколько вариантов ответа</div>
+
+						<div class="reserve__screen">
+							<div class="reserve__item">
+								<input id="khutor" type="checkbox" value="Красная Поляна и Роза Хутор" name="services" class="reserve__radio-custom checkbox">
+								<label for="khutor" class="reserve__label checkbox"><span>Красная Поляна и Роза Хутор</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Ring" type="checkbox" value="Золотое Кольцо Абхазии (VIP Тур)" name="services" class="reserve__radio-custom checkbox">
+								<label for="Ring" class="reserve__label checkbox"><span>Золотое Кольцо Абхазии (VIP Тур)</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Jeep" type="checkbox" value="Джип-Тур Абхазия" name="services" class="reserve__radio-custom checkbox">
+								<label for="Jeep" class="reserve__label checkbox"><span>Джип-Тур Абхазия</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="33" type="checkbox" value="33 Водопада" name="services" class="reserve__radio-custom checkbox">
+								<label for="33" class="reserve__label checkbox"><span>33 Водопада</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Hospitable" type="checkbox" value="Гостеприимная Абхазия" name="services" class="reserve__radio-custom checkbox">
+								<label for="Hospitable" class="reserve__label checkbox"><span>Гостеприимная Абхазия</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="ghost" type="checkbox" value="Акармара, Ткуарчал, Восточная Абхазия (города призраки)" name="services" class="reserve__radio-custom checkbox">
+								<label for="ghost" class="reserve__label checkbox"><span>Акармара, Ткуарчал, Восточная Абхазия (города призраки)</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Hot" type="checkbox" value="Горячие Источники Абхазия" name="services" class="reserve__radio-custom checkbox">
+								<label for="Hot" class="reserve__label checkbox"><span>Горячие Источники Абхазия</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Fountains" type="checkbox" value="Шоу Поющие Фонтаны" name="services" class="reserve__radio-custom checkbox">
+								<label for="Fountains" class="reserve__label checkbox"><span>Шоу Поющие Фонтаны</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Psaho" type="checkbox" value="Джип-Тур Псахо и Водопад Пасть Дракона" name="services" class="reserve__radio-custom checkbox">
+								<label for="Psaho" class="reserve__label checkbox"><span>Джип-Тур Псахо и Водопад Пасть Дракона</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Solohaul" type="checkbox" value="Джип-Тур Солохаул" name="services" class="reserve__radio-custom checkbox">
+								<label for="Solohaul" class="reserve__label checkbox"><span>Джип-Тур Солохаул</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Horse" type="checkbox" value="Конные Прогулки" name="services" class="reserve__radio-custom checkbox">
+								<label for="Horse" class="reserve__label checkbox"><span>Конные Прогулки</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="ATVs" type="checkbox" value="Квадроциклы" name="services" class="reserve__radio-custom checkbox">
+								<label for="ATVs" class="reserve__label checkbox"><span>Квадроциклы</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Trip" type="checkbox" value="Морская Прогулка на Яхте" name="services" class="reserve__radio-custom checkbox">
+								<label for="Trip" class="reserve__label checkbox"><span>Морская Прогулка на Яхте</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Fishing" type="checkbox" value="Морская Рыбалка" name="services" class="reserve__radio-custom checkbox">
+								<label for="Fishing" class="reserve__label checkbox"><span>Морская Рыбалка</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="flights" type="checkbox" value="Полеты на воздушном шаре" name="services" class="reserve__radio-custom checkbox">
+								<label for="flights" class="reserve__label checkbox"><span>Полеты на воздушном шаре</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Diving" type="checkbox" value="Дайвинг" name="services" class="reserve__radio-custom checkbox">
+								<label for="Diving" class="reserve__label checkbox"><span>Дайвинг</span></label>
+							</div>
+							<div class="reserve__item">
+								<input id="Individual" type="checkbox" value="Индивидуальные туры" name="services" class="reserve__radio-custom checkbox">
+								<label for="Individual" class="reserve__label checkbox"><span>Индивидуальные туры</span></label>
+							</div>
+						</div>
+
+						<div class="reserve__bottom">
+							<button class="reserve__button reserve__button-prev">← Назад</button>
+							<div class="reserve__pagination">2/4</div>
+							<button class="reserve__button reserve__button-next">Вперед →</button>
+						</div>
+
+
+					</div>
+
+					<div class="reserve__wrapper reserve__wrapper-3">
+
+						<div class="reserve__text">Здесь Вы можете забронировать понравившееся направление</div>
+
+						<div class="reserve__screen">
+							<div class="reserve__subtitle">Сколько нужно взрослых мест?</div>
+							<div class="reserve__inner">
+								<button class="reserve__inner-minus reserve__inner-minus-top"></button>
+								<input class="reserve__inner-input reserve__inner-input-top" placeholder="0" value="2" type="number">
+								<button class="reserve__inner-plus reserve__inner-plus-top"></button>
+							</div>
+							<div class="reserve__subtitle">Сколько нужно детских мест?</div>
+							<div class="reserve__inner">
+								<button class="reserve__inner-minus reserve__inner-minus-bottom"></button>
+								<input class="reserve__inner-input reserve__inner-input-bottom" placeholder="0" type="number">
+								<button class="reserve__inner-plus reserve__inner-plus-bottom"></button>
+							</div>
+						</div>
+
+						<div class="reserve__bottom">
+							<button class="reserve__button reserve__button-prev">← Назад</button>
+							<div class="reserve__pagination">3/4</div>
+							<button class="reserve__button reserve__button-next">Вперед →</button>
+						</div>
+
+					</div>
+
+					<div class="reserve__wrapper reserve__wrapper-4">
+
+						<div class="reserve__text">Здесь Вы можете забронировать понравившееся направление</div>
+						<div class="reserve__title">Заполните форму и мы свяжемся с Вами в ближайшее время!</div>
+
+						<div class="reserve__screen">
+							<div class="reserve__inner column">
+								<div class="reserve__subtitle">Ваш телефон</div>
+								<input class="reserve__input reserve__input-phone input" id="Phone" ms-code-phone-number="ru">
+							</div>
+							<div class="reserve__inner column">
+								<div class="reserve__subtitle">Ваше имя</div>
+								<input type="text" class="reserve__input reserve__input-name">
+							</div>
+							<div class="reserve__inner column">
+								<div class="reserve__subtitle">На какое число планируете поездку?</div>
+								<input type="date" name="Date" id="davaToday" class="reserve__input reserve__input-date">
+							</div>
+							<div class="reserve__inner column">
+								<div class="reserve__subtitle">Промокод:</div>
+								<input type="text" class="reserve__input reserve__input-promo">
+							</div>
+						</div>
+
+						<div class="reserve__bottom">
+							<button class="reserve__button reserve__button-prev">← Назад</button>
+							<div class="reserve__pagination">4/4</div>
+							<button class="reserve__button reserve__button-next">Забронировать</button>
+						</div>
+
+					</div>
+
+					<div class="reserve__wrapper reserve__wrapper-5">
+
+						<div class="reserve__text">Здесь Вы можете забронировать понравившееся направление</div>
+
+
+						<div class="reserve__texting">
+							Места успешно забронированы! Среднее время ответа 1 минута, 26 секунд. Мы свяжемся с Вами в мессенджере или по телефону! Режим работы 8:00-23:00, Если оставили заявку в нерабочее время, свяжемся с Вами утром.
+						</div>
+
+
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main class="main main__observatory">
+		<div class="main__container">
+			<div class="main__wrapper">
+				<h1 class="main__text">Обзорная Сочи</h1>
+			</div>
+			<ul class="main__items">
+				<li class="main__item">
+					<div class="main__title">Ежедневно</div>
+					<div class="main__subtitle">Когда?</div>
+				</li>
+				<li class="main__item">
+					<div class="main__title">
+						С 12.50 до 18.00
+					</div>
+					<div class="main__subtitle">Во сколько?</div>
+				</li>
+				<li class="main__item">
+					<div class="main__title">Mercedes-Benz, Sprinter</div>
+					<div class="main__subtitle">На чем?</div>
+				</li>
+			</ul>
+		</div>
+	</main>
+
+	<section class="info">
+		<div class="info__container">
+			<div class="info__wrapper">
+				<div class="info__text">
+					Прикоснитесь к секретам прошлого и узнайте, какие легенды хранят опустевшие жемчужины Сочи и самые знаковые места города – гора Ахун, дача Сталина, Морской вокзал, Зимний Театр, Агурское ущелье и кавказский аул покажут то, что скрыто за кипящей жизнью курорта.
+				</div>
+				<div class="info__bottom">
+					<svg class="info__icon" viewBox="0 0 80 180">
+						<path d="M54.1 110c-1.1 0-2.2-.5-2.9-1.5-1.1-1.6-.7-3.8.8-4.9 1-.7 4.9-2.9 8.9-5.2-14.8-2-27.2-8.9-36.1-20.2C7.9 56.3 7.5 24.1 12.3 3.2c.4-1.9 2.3-3.1 4.2-2.6 1.9.4 3.1 2.3 2.6 4.2-4.5 19.4-4.2 49.2 11.4 69.1 8.4 10.7 19.9 16.7 34.2 17.9l-.4-.5c-1.4-1.7-2.7-3.4-4.1-5.1-.7-.9-1.5-1.9-2.3-2.9-1.2-1.5-1-3.7.5-4.9s3.7-1 4.9.5l6.4 8c.5.5.9 1.1 1.4 1.6 1.5 1.8 3.1 3.7 4.5 5.6.1.1.1.2.2.3.2.4.4.8.4 1.3v.7c0 .3-.1.7-.2 1-.1.2-.2.4-.3.5-.2.3-.5.6-.7.9-.2.2-.4.3-.7.5-.1 0-.1.1-.2.1-1.7.8-16 8.6-17.9 9.9-.7.5-1.4.7-2.1.7zM74 99.5s-.1 0 0 0c-.1 0 0 0 0 0z"></path>
+					</svg>
+					<button class="info__button reserve-active">Забронировать</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="route">
+		<div class="route__container">
+			<h2 class="route__text">Последовательность маршрута</h2>
+			<div class="route__items">
+
+				<div class="route__item left">
+					<div class="route__item-text">
+						<div class="route__title">Морской порт Сочи</div>
+						<div class="route__subtitle">Локация, которая не перестает удивлять своей красотой и великолепием. Вы узнаете всю историю роскошного сооружения и сделаете потрясающие кадры на память.</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle left">1</div>
+						<div class="route__line left"></div>
+					</div>
+				</div>
+
+				<div class="route__item right">
+					<div class="route__item-text">
+						<div class="route__title">Ущелье Ахцу</div>
+						<div class="route__subtitle">Захватывающий вид многовекового ущелья Ахцу – здесь вы насладитесь природным пейзажем, который откроется перед вами со смотровой площадки, а также непременно сделаете эффектные фото на память.</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle right">2</div>
+						<div class="route__line right"></div>
+					</div>
+				</div>
+
+				<div class="route__item left">
+					<div class="route__item-text">
+						<div class="route__title">Зимний Театр</div>
+						<div class="route__subtitle">Визитная карточка Большого Сочи, Минеральный источник Бювет ,Прогулка и классные фото</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle left">3</div>
+						<div class="route__line left"></div>
+					</div>
+				</div>
+
+				<div class="route__item right">
+					<div class="route__item-text">
+						<div class="route__title">Гора Ахун</div>
+						<div class="route__subtitle">Здесь вас будет ждать насыщенная программа и множество развлечений. Знаменитая башня, парк «Пик 701» (вас ждет колесо обозрения с потрясающим видом, веревочный парк, хаски центр, оленья ферма и музей микроминиатюр. Приятный бонус – в составе нашей экскурсии все развлечения парка для вас будут по стоимости детского билета!
+
+							Помимо развлечений, Гора Ахун известна своей таинственной достопримечательностью – заброшенным рестораном, вокруг которого по сей день витает множество слухов и домыслов.</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle right">4</div>
+						<div class="route__line right"></div>
+					</div>
+				</div>
+
+				<div class="route__item left">
+					<div class="route__item-text">
+						<div class="route__title">Дача Сталина</div>
+						<div class="route__subtitle">Дача Иосифа Сталина – утопающий в зелени дом-музей с красивой территорией, по которой вы сможете прогуляться, а при желании у вас будет возможность посетить саму дачу и более подробно познакомиться с ее историей.</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle left">5</div>
+						<div class="route__line left"></div>
+					</div>
+				</div>
+
+				<div class="route__item right">
+					<div class="route__item-text">
+						<div class="route__title">Агура с источником и Кавказский Аул с дегустациями</div>
+					</div>
+					<div class="route__inner">
+						<div class="route__circle right">6</div>
+						<div class="route__line right"></div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<div class="photo">
+		<div class="photo__container">
+
+			<div class="photo__slider swiper">
+				<div class="photo__wrapper swiper-wrapper">
+
+					<div class="photo__slide swiper-slide"><img src="../img/Observatory Sochi/1.jpg" alt="Изображение"></div>
+					<div class="photo__slide swiper-slide"><img src="../img/Observatory Sochi/2.jpg" alt="Изображение"></div>
+					<div class="photo__slide swiper-slide"><img src="../img/Observatory Sochi/3.jpg" alt="Изображение"></div>
+
+				</div>
+				<div class="photo__navigation">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="photo__pagination swiper-pagination"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="price">
+		<div class="price__container">
+			<h2 class="price__text">Наш прайс и дополнительная информация</h2>
+			<ul class="price__items">
+				<li class="price__item title">Стоимость</li>
+				<li class="price__item">1200₽ - взрослый</li>
+				<li class="price__item">1000₽ - дети с 6 до 12 лет</li>
+				<li class="price__item">Дети до 6 лет - бесплатно на руках</li>
+				<li class="price__item">Вход на Башню Ахун 200₽</li>
+			</ul>
+			<ul class="price__items">
+				<li class="price__item title">Возможные дополнительные расходы:</li>
+				<li class="price__item">Дача Сталина - 400₽, 200₽(детский)</li>
+				<li class="price__item">Колесо Обозрения - 250₽</li>
+				<li class="price__item">Веревочный парк - 300₽</li>
+				<li class="price__item">Музей микроминиатюр - 250₽</li>
+				<li class="price__item">Обед 300-500₽</li>
+			</ul>
+			<button class="price__button reserve-active">Забронировать</button>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<a href="" class="footer__logo">
+				<div class="logo__wrapper">
+					<div class="logo__top">
+						<img src="../img/logo.png" alt="Логотип">
+						<div class="logo__text">
+							<p class="logo__title">Sochi Travell</p>
+							<p class="logo__subtitle">путешествуй с пользой</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			<div class="footer__info">
+				<a href="tel:89516285001" class="footer__phone">89516285001 Александр</a>
+				<div class="footer__copyright">© 2023 Sochi Travell</div>
+				<a href="#no-scroll" class="footer__policy">Политика конфиденциальности</a>
+			</div>
+			<div class="footer__icons">
+				<a href="https://t.me/Nikolay_Gennadyevich" target="_blank" class="footer__link">
+					<svg class="footer__icon" viewBox="0 0 100 100">
+						<path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#ffffff"></path>
+					</svg>
+				</a>
+				<a href="https://wa.me/89516285001" target="_blank" class="footer__link">
+					<svg class="footer__icon" viewBox="0 0 100 100">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M50.168 10C60.8239 10.004 70.8257 14.1522 78.346 21.6819C85.8676 29.2114 90.0066 39.2185 90 49.8636C89.9906 71.8252 72.1203 89.6956 50.1668 89.6956H50.1508C43.4852 89.6929 36.9338 88.0208 31.1162 84.8468L10 90.3853L15.6516 69.7437C12.1665 63.7042 10.3323 56.851 10.3349 49.8304C10.343 27.8676 28.2134 10 50.168 10V10ZM61.5376 54.7631C62.4507 55.0954 67.3433 57.5023 68.3389 58.0009C68.5313 58.0971 68.7113 58.1842 68.8784 58.265C69.5753 58.602 70.0458 58.8296 70.2462 59.1651C70.4947 59.5799 70.4947 61.5736 69.6654 63.8982C68.8359 66.2229 64.8605 68.3442 62.9478 68.63C61.2319 68.8865 59.0627 68.9928 56.6782 68.2353C55.2322 67.7767 53.3794 67.1653 51.0041 66.1392C41.6698 62.1082 35.3628 53.06 34.1747 51.3556C34.0919 51.2368 34.0341 51.1538 34.0017 51.1106L33.9981 51.1056C33.486 50.4243 29.9372 45.7022 29.9372 40.8149C29.9372 36.2325 32.1873 33.8303 33.2244 32.7232C33.2961 32.6467 33.3619 32.5763 33.4208 32.5118C34.3341 31.5149 35.412 31.2664 36.0751 31.2664C36.7385 31.2664 37.4029 31.2717 37.9826 31.301C38.0541 31.3046 38.1286 31.304 38.2056 31.3037C38.786 31.3001 39.5087 31.2957 40.2221 33.0089C40.4976 33.6707 40.9012 34.653 41.3265 35.6882C42.1818 37.7702 43.1251 40.066 43.2912 40.399C43.5397 40.8974 43.7058 41.4782 43.3736 42.1427C43.323 42.2436 43.2763 42.3387 43.2318 42.4295C42.9831 42.9364 42.7995 43.3104 42.378 43.8029C42.2125 43.9963 42.0413 44.2045 41.8703 44.4131C41.5273 44.8309 41.1842 45.2488 40.8853 45.5467C40.387 46.0425 39.8686 46.5808 40.4493 47.5777C41.0303 48.5731 43.028 51.8323 45.9867 54.472C49.1661 57.3091 51.93 58.5078 53.3318 59.1157C53.6058 59.2346 53.8279 59.3308 53.9907 59.4124C54.9849 59.9109 55.5658 59.8284 56.1465 59.1637C56.7274 58.4993 58.6347 56.2583 59.298 55.2615C59.9612 54.2646 60.6259 54.4307 61.5376 54.7631V54.7631Z" fill="#ffffff"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
